@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 1px;
+    margin-bottom: 6px;
+    background-image: linear-gradient(to right, rgb(255, 0, 128), rgb(255, 123, 0));
+    box-shadow: 0px 2px 5px darkgray;
+}
+
+header p {
+    padding: 1px;
+    color: white;
+}
+
+#main {
+    max-width: 720px;
+    margin: auto;
+    background-color: white;
+    min-height: 100%;
+}
+
+#divVerse {
+    margin: 2px;
+    margin-top: 0px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#divInterface button {
+    border: none;
+    background-color: black;
+    color: white;
+    height: 2em;
+    width: 9em;
+    margin: 2px;
+}
+    
+#divInterface button:active {
+    background-color: rgb(255, 0, 128);
+}
+
+#divInterface span {
+    border: none;
+    background-color: black;
+    color: white;
+    height: 2em;
+    width: 11em;
+    padding: .25em;
+    margin: 2px;
+}
+    
+#divInterface span:active {
+    background-color: rgb(255, 0, 128);
+}
+
+#divFeedback {
+    font-size: small;
+    padding: 0px;
+    margin: 0px;
+}
+
+#displayVerse {
+    margin: 2px;
+    min-height: 3em;
+    font-size: 2em;
+    line-height: 1.3em;
+}
+
+#versePick {
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    right: 10%;
+    padding: 4px;
+}
+    
+#versePick a:active {
+    color: rgb(255, 0, 128);
+}
+
+#versePick li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#verseSearch {
+    padding: 10px;
+}
+
+footer {
+    text-align: right;
+}
+footer a {
+    color: gray;
+    text-decoration: none;
+    font-size: .7em;
+    
+}

@@ -1,99 +1,51 @@
+<!-- bmg.html  -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset=utf-8>
-        <link rel="stylesheet" type="text/css" href="normalize.css">
-        <style>
-            
-            #wrapper {
-                width: 960px;
-                margin: auto;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-
-            a {
-                text-decoration: none;
-                color: white;
-            }
-
-            a:visited {
-                color: white;
-            }
-            
-            header {
-                height: 100px;
-                background-image: linear-gradient(to right, rgb(255, 0, 179), rgb(255, 145, 0));
-                border-radius: 5px;
-            }
-            header h1 {
-                color: white;
-                padding: 10px;
-            }
-            nav {
-                height: 50px;
-                background-color: white;
-                border-width: 1px;
-                border-color: gray;
-                margin: 5px;
-            }
-            #main {
-                background-color: white;
-                display: grid;
-                grid-template-columns: 25% 25% 25% 25%;
-                grid-template-rows: 25% 25% 25% 25%;
-                grid-auto-flow: row;
-                    grid-row-gap: 10px;
-            }
-            #main div {
-                color: white;
-                background-image: radial-gradient(circle at -50% -50%, rgb(102, 255, 0) 10%, rgb(0, 102, 255));
-                border-color: gray;
-                border-radius: 5px;
-                padding: 10px;
-                height: 100px;
-                width: auto;
-                margin: 20px;   
-            }
-
-            #main div:hover {
-                background-image: radial-gradient(circle at 0% 0%, rgb(162, 0, 255) 10%, rgb(255, 8, 0));
-            }
-
-            a div {
-                font-size: x-large;
-            }
-
-        </style>
+        <title>Bible Memory Game</title>
+        <script src="keys.js"></script>
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <div id="wrapper">
-            <header>
-                <h1>Bible Memory Game</h1>
-            </header>
-            <nav>Nav</nav>
-            <div id="main">
-                <!-- <div><a href="game.html">Blackout</a></div> -->
-                <a href="game.html">
-                    <div>
-                       Blackout
+    <!-- <body onload="buildPracticeDisplayVerse(displayVerse)"> -->
+        <header>
+            <p>Bible Memory Game</p>
+        </header>
+        <div id="main">
+            <div id="divDisplay">
+                    <div id="versePick" style="display: flex;">
+                        <div id="verseSearch">
+                            <p>Search for a verse to memorize:</p>
+                            <input id="myTextArea"></input>
+                            <button onclick="bibleApiTest()">Search</button>
+                        </div>
                     </div>
-                </a>
-                <a href="coming-soon.html">
-                    <div>
-                        Game
-                    </div>
-                </a>
-                <a href="coming-soon.html">
-                    <div>
-                        Game
-                    </div>
-                </a>
-                <a href="coming-soon.html">
-                    <div>
-                       Game
-                    </div>
-                </a>
-            </div> <!-- main -->
-        </div> <!-- wrapper-->
+                <div id="divInterface"> <!-- Buttons to move between practice and quiz modes, reveal the entire verse, hide the entire verse -->
+                    <button onclick="showAll()">Show All</button>
+                    <button onclick="blackOutAll()">Hide All</button>
+                    <!-- <button id="modeToggleBtn" onclick="modeToggle()">Start Quiz</button> -->
+                    <button id="pickVerseBtn" onclick="showPicker()">Change Verse</button>
+                </div>
+                <div id="divFeedback"> <!-- Instructions and feedback for the user -->
+                    <p>Click a word in the verse to hide or reveal the word.</p>
+                </div>
+                <div id="divVerse"> <!-- Display the verse to be memorized -->
+                    <p id="displayVerse"></p>
+                </div>
+                <div id="divResponse"> <!-- Buttons representing multiple-choice responses for the user to answer -->
+
+                </div>
+            </div> <!-- divDisplay -->
+            <footer id="footer">
+                <address>
+                        <a href="mailto:joelzehring@gmail.com">Contact</a>
+                </address>
+            </footer>
+        </div> <!-- main -->
     </body>
+    <script>
+
+    </script>
 </html>
